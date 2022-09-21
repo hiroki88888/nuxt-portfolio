@@ -1,5 +1,3 @@
-// blog.vue
-
 <template>
     <div class="wrapper">
         <div class="container">
@@ -10,12 +8,12 @@
                 <h3>{{ singleData.title }}</h3>
                 <p>{{ singleData.excerpt }}</p>
                 <p>{{ singleData.date }}</p>
-                <NuxtLink :to="singleData._path" class="linkButton">Read More</NuxtLink>
+                <NuxtLink :to="singleData._path">Read More</NuxtLink>
             </div>
             <div class="blogImg">
                 <img :src="singleData.image" alt="blog-image">
             </div>
-        </div>
+            </div>
         </div>
         <Pagination :numberPages="numberPages" />
     </div>
@@ -23,12 +21,14 @@
 
 <script setup>
     const blogsPerPage = 5
+    const currentPage = useRoute().params.pagination
 
     const { data } = await useAsyncData("blogQuery",()=>
-    queryContent("/blog")
-    .sort({ id: -1 })
-    .limit(blogsPerPage)
-    .find()
+        queryContent("/blog")
+        .sort({ id: -1 })
+        .limit(blogsPerPage)
+        .skip(blogsPerPage * (currentPage - 1))
+        .find()
     )
 
     const allBlogs = await queryContent("/blog").find()
@@ -36,9 +36,9 @@
     const numberPages = Math.ceil(allBlogs.length / blogsPerPage)
 
     useHead({
-        title: "ブログ",
+        title: 'ブログ | ${currentPage}',
         meta: [
-            {name: "description", content: "ブログページです"}
+            { name: "description", content: "ブログページです"}
         ],
     })
 </script>

@@ -19,6 +19,12 @@
 </template>
 
 <script sestup>
+userHead({
+    title: "コンタクト",
+    meta: [
+        {name: "description", content: "コンタクトページです"}
+    ],
+})
 </script>
 
 <style>
