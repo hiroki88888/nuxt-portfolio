@@ -35,10 +35,10 @@
 
     const numberPages = Math.ceil(allBlogs.length / blogsPerPage)
 
-    useHead({
+  /*  useHead({
         title: "ブログ",
         meta: [
             {name: "description", content: "ブログページです"}
         ],
-    })
+    }) */
 </script>

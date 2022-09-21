@@ -19,12 +19,12 @@
 </template>
 
 <script sestup>
-userHead({
+/* useHead({
     title: "コンタクト",
     meta: [
         {name: "description", content: "コンタクトページです"}
     ],
-})
+}) */
 </script>
 
 <style>

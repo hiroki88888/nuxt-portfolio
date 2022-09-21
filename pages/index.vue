@@ -34,13 +34,12 @@
 </template>
 
 <script setup>
-useHead({
+/* useHead({
     title: "Abe Hiroki Official Site",
     meta: [
         {name: "description", content: "Abe Hirokiのポートフォリオです"}
     ],
-})
-
+}) */
 
 </script>
 
