@@ -15,7 +15,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: rgba(128, 128, 128, 0.8);
     padding: 0rem 2rem 1rem;
     border-radius: 5px;
@@ -81,7 +81,7 @@
     display: inline-block;
     margin: 10rem 0;
     padding: 1.3rem 6rem;
-    background-color: #108775;
+    background-color: #107b87;
     border-radius: 25px; 
     color: #fff;
 }

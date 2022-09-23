@@ -14,7 +14,8 @@ export default defineNuxtConfig
         "~/assets/styles/index.css",
         "~/assets/styles/blog.css",
         "~/assets/styles/contact.css",
-        "~/assets/styles/singleblog.css"
+        "~/assets/styles/singleblog.css",
+        "~/assets/styles/works.css"
     ]
 
 })
